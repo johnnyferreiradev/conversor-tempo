@@ -1,0 +1,218 @@
+/****** Grid Principal *******/
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px auto 50px; 
+    grid-row-gap: 50px;
+}
+
+/****** Grids Secundárias ******/
+
+/*** Cabecalho ***/
+header {
+    display: grid;
+    grid-template-columns: 1fr 40% 1fr;
+    grid-template-rows: 100%;
+}
+
+/*** Corpo da pagina ***/
+main {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 1fr 25px;
+    grid-row-gap: 10px;
+}
+
+.container-calc {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+    grid-template-rows: 100%;
+}
+
+.calc {
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 30px 100px 20px 1fr 20px;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: 1fr 10px 30%;
+    grid-template-rows: 100%;
+}
+
+.numerico {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.funcoes {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+/*** rodape ***/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+}
+
+/****** Posicionando elementos ******/
+
+/*** Cabecalho ***/
+header nav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+nav ul{
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*** Conteudo ***/
+.preview {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.next {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container-calc {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.status {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.titulo-calc {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    align-items: center;
+}
+
+.io-calc {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.teclado {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.numerico {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.funcoes {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.teclado [btn-num=ponto] {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.funcoes [btn-funcao=calc] {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/*** Rodapé ***/
+footer{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.txt {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    align-items: center;
+}
+
+.botao {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Conversor</title>
+
+    <link rel="stylesheet" href="../assets/css/grids.css">
+    <link rel="stylesheet" href="../assets/css/estilo1.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Orbitron" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="ativo">OPCAO 1</a></li>
+                <li><a href="#">OPCAO 2</a></li>
+                <li><a href="#">OPCAO 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <span class="preview">
+            <div class="alt-status" id="left">
+                <div class="alt-status-i">
+                    <div style="z-index: 10;"><span><i class="fas fa-angle-left"></i></span></div>
+                </div>
+            </div>
+        </span>
+        <span class="next">
+            <div class="alt-status" id="right">
+                <div class="alt-status-i">
+                    <div style="z-index: 10;"><span><i class="fas fa-angle-right"></i></span></div>
+                </div>
+            </div>
+        </span>
+
+        <div class="status">
+            <div class="container-status">
+                <div class="status-item status-ativo">
+                    <div style="z-index: 10;"></div>
+                </div>
+
+                <div class="status-item">
+                    <div style="z-index: 10;"></div>
+                </div>
+
+                <div class="status-item">
+                    <div style="z-index: 10;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-calc">
+            <div class="calc">
+                <div class="titulo-calc">Conversor de Tempo</div>
+                <div class="io-calc">
+                    <div class="inputs">
+                        <input type="text" id="entrada" onkeypress='return SomenteNumero(event)'>
+                        <span>=</span>
+                        <input type="text" id="saida" onkeypress='return SomenteNumero(event)' disabled>
+                    </div>
+                    <div class="selects">
+                        <select id="slc-entrada">
+                            <option value="ano">Anos</option>
+                            <option value="mes">Meses (30 dias)</option>
+                            <option value="semana">Semanas</option>
+                            <option value="dia">Dias</option>
+                            <option value="hora">Horas</option>
+                            <option value="minuto">Minutos</option>
+                            <option value="segundo" selected>Segundos</option>
+                            <option value="milissegundo">Milissegundos</option>
+                        </select>
+                        <button><i class="fas fa-exchange-alt"></i></button>
+                        <select id="slc-saida">
+                            <option value="ano">Anos</option>
+                            <option value="mes">Meses (30 dias)</option>
+                            <option value="semana">Semanas</option>
+                            <option value="dia">Dias</option>
+                            <option value="hora">Horas</option>
+                            <option value="minuto">Minutos</option>
+                            <option value="segundo">Segundos</option>
+                            <option value="milissegundo" selected>Milissegundos</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="teclado">
+                    <div class="numerico">
+                        <div btn-num="7" class="teclado-btn">7</div>
+                        <div btn-num="8" class="teclado-btn">8</div>
+                        <div btn-num="9" class="teclado-btn">9</div>
+                        <div btn-num="4" class="teclado-btn">4</div>
+                        <div btn-num="5" class="teclado-btn">5</div>
+                        <div btn-num="6" class="teclado-btn">6</div>
+                        <div btn-num="1" class="teclado-btn">1</div>
+                        <div btn-num="2" class="teclado-btn">2</div>
+                        <div btn-num="3" class="teclado-btn">3</div>
+                        <div btn-num="0" class="teclado-btn">0</div>
+                        <div btn-num="ponto" class="teclado-btn">.</div>
+                    </div>
+                    <div class="funcoes">
+                        <div btn-funcao='calc' class="teclado-btn">Calcular</div>
+                        <div btn-funcao='del' class="teclado-btn">Deletar</div>
+                        <div btn-funcao='clear' class="teclado-btn">Limpar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="txt">
+            <span class="menos-foco">Desenvolvido por: </span>
+            <span class="mais-foco"> Johnny Ferreira &copy; 2018 </span>
+        </span>
+        <span class="botao">
+            <div class="btn">
+                Contato
+            </div>
+        </span>
+    </footer>
+
+    <script src="../assets/js/calculadora.js"></script>
+</body>
+
+</html>

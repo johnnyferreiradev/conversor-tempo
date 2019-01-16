@@ -1,0 +1,280 @@
+/*** Configurações Gerais ***/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    background-image: url(../images/fundo-calc3.jpg);
+    background-size: 100%;
+}
+
+html, 
+body {
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*** Cabecalho ***/
+header {
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+nav ul { list-style: none; }
+
+li a{
+    text-decoration: none;
+    color: #999999;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: all .5s;
+}
+
+a:hover {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #666666;
+    transition: all .2s;
+}
+
+li a.ativo {
+    background: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #666666;
+}
+
+/** Botões Avançar / Voltar **/
+.alt-status {
+    width: 40px;
+    height: 40px;
+    color: #444;
+}
+
+.alt-status:hover {
+    cursor: pointer;
+}
+
+#left { 
+    position: relative;
+    right: -15px;
+    top: -25px;
+}
+
+#right { 
+    position: relative;
+    right: 20px;
+    top: -25px;
+}
+
+.alt-status-i {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #00ffff;
+    background-color: #495a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.alt-status-i div {
+    width: 75%;
+    height: 75%;
+    background-color: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/** Icones de status **/
+.container-status {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.status-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-item div {
+    height: 15px;
+    width: 15px;
+    background-color: #495a5a;
+    border-radius: 100%;
+}
+
+div.status-ativo {
+    box-sizing: border-box;
+    height: 28px;
+    width: 28px;
+    border: 4px solid #00ffff;
+    background-color: #495a5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+div.status-ativo div {
+    width: 60%;
+    height: 60%;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+/** Calculadora **/
+.calc {
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #aaa;
+}
+
+.titulo-calc {
+    color: #888;
+}
+
+.inputs,
+.selects {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputs input{
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 6px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+}
+
+.selects button {
+    background-color: #cecece;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px #888;
+    color: #444;
+}
+
+.inputs span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #888;
+}
+
+#entrada,
+#saida {
+    width: 40%;
+}
+
+#slc-entrada,
+#slc-saida {
+    -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
+    -moz-appearance: none; /* Remove estilo padrão do FireFox */
+    appearance: none; /* Remove estilo padrão do FireFox*/
+    width: 40%;
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px #888;
+    border: none;
+    background-color: #cecece;
+    padding-left: 10px;
+    color: #444;
+}
+
+.numerico div{
+    background: linear-gradient(to right, #eeeeee, #f7f7f7);
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px #888;
+    font-size: 30px;
+    color: #444444;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funcoes div {
+    background-color: #a1a1a1;
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px #888;
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funcoes [btn-funcao=calc] {
+    background-color: #87e5fd;
+}
+
+.funcoes [btn-funcao=del] {
+    background-color: #fd8787;
+}
+
+.funcoes [btn-funcao=clear] {
+    background-color: #fde687;
+}
+
+.slc-entrada:hover,
+.slc-saida:hover,
+button:hover,
+.slc-entrada:hover,
+.teclado-btn:hover {
+    cursor: pointer;
+}
+
+.slc-entrada:active,
+.slc-saida:active,
+button:active,
+.slc-entrada:active,
+.teclado-btn:active {
+    box-shadow: none;
+}
+
+
+/*** Rodapé ***/
+footer {
+    background-color: #4d4d4d;
+    border-top: 6px solid #00ffff;
+}
+
+.txt { padding-left: 20px; }
+
+.txt .menos-foco {
+    padding-right: 5px;
+    color: #999999;
+}
+
+.txt .mais-foco {
+    color: #eeeeee;
+}
+
+.botao { padding-right: 20px; }
+
+.botao .btn {
+    background: linear-gradient(to right, #00a2ff, #00ffff);
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    color: #fff;
+    box-shadow: 2px 2px 2px #222;
+    transition: all .2s;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #008ddf, #00e4e4);
+    cursor: pointer;
+    transition: all 2s;
+}
